@@ -54,6 +54,10 @@ import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 
+//animacion
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule,MatListModule,MatCardModule} from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,6 +89,10 @@ import { SexoPipe } from './pipes/sexo.pipe';
     FormsModule,
     RuteandoModule,
     HttpModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatListModule,
+    MatCardModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })

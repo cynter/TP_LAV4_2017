@@ -1,78 +1,37 @@
 <app-cabecera>  </app-cabecera>
+<div class="parallax" >
+    <div class="hero-text">
+  <mat-card>
+    <mat-list>
+        <h2 mat-subheader>Menu Principal</h2>
+        <mat-divider></mat-divider>
+        <h2 mat-subheader>Juegos</h2>
+        <mat-list-item class="resaltar" routerLink="/Juegos">
+          <img mat-list-icon src="./assets/imagenes/saladejuegos.png"/>          
+          <p mat-line> El método lúdico es un conjunto de estrategias diseñadas para crear un ambiente de armonía en los estudiantes que están inmersos en el proceso de aprendizaje. Este método busca que los alumnos se apropien de los temas impartidos por los docentes utilizando el juego. </p>
+        </mat-list-item>
 
+        <mat-divider></mat-divider>
+        <h2 mat-subheader>Lista de Resultados</h2>
+        <mat-list-item class="resaltar" routerLink="/Listado">
+          <img mat-list-icon src="./assets/imagenes/listado.jpg"/>          
+          <p mat-line>Los listados de los resultados con ordenamiento y busqueda </p>
+        </mat-list-item>
 
+        <mat-divider></mat-divider>
+        <h2 mat-subheader>Configuraci&oacute;n</h2>
+        <mat-list-item class="resaltar" routerLink="/Juegos">
+          <img mat-list-icon src="./assets/imagenes/Configuracion.png"/>          
+          <p mat-line>Ajustes de la aplicacion y los métodos de autentificación </p>
+        </mat-list-item>
 
- 
-<div class="container" >
-   
-    <ul class="list-group">
-        <li class="list-group-item list-group-item-danger">
-           
-                <div class="media-body">
-                    <div class="hero-text">
-                        <h4 >Menú Principal</h4>
-                    </div>
-                 </div>
-               
-             
-          </li>
-        <li class="list-group-item list-group-item-success">
-          <a routerLink="/Juegos">
-            <div class="media">
-              <div class="media-left">
-                    <img src="./assets/imagenes/saladejuegos.png" class="media-object imagenDeMenu" >
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">Juegos</h4>
-                <p>El método lúdico es un conjunto de estrategias diseñadas para crear un ambiente de armonía en los estudiantes que están inmersos en el proceso de aprendizaje. Este método busca que los alumnos se apropien de los temas impartidos por los docentes utilizando el juego.</p>
-              </div>
-             
-            </div> 
-          </a>
-        </li>
-        <li class="list-group-item list-group-item-info">
-            <a routerLink="/Listado">
-              <div class="media">
-                  <div class="media-left">
-                      <img src="./assets/imagenes/listado.jpg" class="media-object imagenDeMenu" >
-                    </div>
-                <div class="media-body">
-                  <h4 class="media-heading">Listados de resultados</h4>
-                  <p>Los listados de los resultados con ordenamiento y busqueda</p>
-                </div>
-                
-              </div> 
-            </a>
-          </li>
-        <li class="list-group-item list-group-item-warning">
-          <a routerLink="/Juegos">
-            <div class="media">
-                <div class="media-left">
-                    <img src="./assets/imagenes/Configuracion.png" class="media-object imagenDeMenu" >
-                  </div>
-              <div class="media-body">
-                <h4 class="media-heading">Configuraci&oacute;n</h4>
-                <p>Ajustes de la aplicacion y los métodos de autentificación</p>
-              </div>
-             
-            </div> 
-          </a>
-        </li>
-        <li class="list-group-item list-group-item-warning">
-          <a routerLink="/Jugadores">
-            <div class="media">
-                <div class="media-left">
-                    <img src="./assets/imagenes/jugadores.png" class="media-object imagenDeMenu" >
-                  </div>
-              <div class="media-body">
-                <h4 class="media-heading">Jugadores</h4>
-                <p>Listado de jugadores</p>
-              </div>
-             
-            </div> 
-          </a>
-        </li>
-       
-        
-      </ul>
-</div>
+        <mat-divider></mat-divider>
+        <h2 mat-subheader>Jugadores</h2>
+        <mat-list-item class="resaltar" routerLink="/Jugadores">
+          <img mat-list-icon src="./assets/imagenes/jugadores.png"/>          
+          <p mat-line>Listado de jugadores </p>
+        </mat-list-item>
+      </mat-list>
+  </mat-card>  
+    </div>
+</div> 
