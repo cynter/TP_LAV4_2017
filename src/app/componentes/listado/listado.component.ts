@@ -8,6 +8,7 @@ import { JuegoServiceService } from '../../servicios/juego-service.service';
 })
 export class ListadoComponent implements OnInit {
   public listadoParaCompartir: Array<any>;
+  /*
    miServicioJuego:JuegoServiceService
 
   constructor(servicioJuego:JuegoServiceService) {
@@ -29,5 +30,17 @@ export class ListadoComponent implements OnInit {
     this.miServicioJuego.listarPromesa().then((listado) => {
         this.listadoParaCompartir = listado;
     });
+  }*/
+
+  unString: string;
+  data: any;
+
+  constructor(public servicioJuego: JuegoServiceService) {
+
+  }
+
+  ngOnInit() {
+    this.listadoParaCompartir = this.servicioJuego.inicializarLista();
+
   }
 }

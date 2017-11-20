@@ -53,10 +53,14 @@ import { MapaDeGoogleComponent } from './componentes/mapa-de-google/mapa-de-goog
 import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
+import { PiedraPapelTijeraMasListadoComponent } from './componentes/piedra-papel-tijera-mas-listado/piedra-papel-tijera-mas-listado.component';
+import { AnagramaMasListadoComponent } from './componentes/anagrama-mas-listado/anagrama-mas-listado.component';
+import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+
 
 //animacion
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule,MatListModule,MatCardModule} from '@angular/material';
+import {MatButtonModule,MatListModule,MatCardModule,MatMenuModule,MatToolbarModule,MatIconModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -78,11 +82,14 @@ import {MatButtonModule,MatListModule,MatCardModule} from '@angular/material';
     CabeceraComponent,
     QuienSoyComponent,
     AnagramaComponent,
+    AnagramaMasListadoComponent,
     ListadoDePaisesComponent,
     MapaDeGoogleComponent,
     JugadoresListadoComponent,
     InputJugadoresComponent,
-    SexoPipe
+    PiedraPapelTijeraMasListadoComponent,
+    SexoPipe,
+    PiedraPapelTijeraComponent
   ],
   imports: [
     BrowserModule,
@@ -93,6 +100,9 @@ import {MatButtonModule,MatListModule,MatCardModule} from '@angular/material';
     MatButtonModule,
     MatListModule,
     MatCardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })

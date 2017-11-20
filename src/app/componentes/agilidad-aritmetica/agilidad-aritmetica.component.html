@@ -2,7 +2,7 @@
 <!--app-menu></app-menu-->
 <!-- index.html -->
 
-
+<!--
 <form name="juego">
 <ul>
    <li>
@@ -36,3 +36,47 @@
 </ul>
 
 </form>
+-->
+
+<div align="center">
+  <div class="titulo">
+    <h1>AGILIDAD ARITMETICA</h1>
+  </div>
+  <br>
+  <div align="center" class="titulo">
+    <h4>Para completar este juego, debes resolver 3 cuentas matematicas, de las cuales, para que el resultado
+      <br> sea positivo, debes acertar minimamente 2. ¡Que te diviertas!
+    </h4>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <input type="text" value="{{unJuego.numero1}}" name="num1">
+
+  <input type="text" value="{{unJuego.operadorCaracter}}" name="signo">
+
+  <input type="text" value="{{unJuego.numero2}}" name="num2">
+  <br>
+  <br>
+  <br>
+
+  <input type="text" placeholder="Escribe la respuesta" [(ngModel)]="unJuego.numeroIngresado" name="numeroIngresado" [ngModelOptions]="{standalone: true}"
+    required>
+  <br>
+  <br>
+  <br>
+
+  <input type="button" class="btn btn-primary" value="SIGUIENTE" name="siguiente" (click)="unJuego.Siguiente()">
+  <br>
+  <br>
+
+  <h3>Ronda Numero: {{unJuego.ronda}}</h3>
+
+  <div *ngIf="unJuego.contador==3">
+    <input type="button" class="btn btn-warning" value="VERIFICAR" name="verificar" (click)="verificar()">
+    <br>
+    <br>
+  </div>
+
+</div>

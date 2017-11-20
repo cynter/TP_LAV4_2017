@@ -1,51 +1,50 @@
-import { Component, OnInit ,Input,Output,EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { JuegoAgilidad } from '../../clases/juego-agilidad'
+import { JuegoServiceService } from '../../servicios/juego-service.service';
 
-import {Subscription} from "rxjs";
-import {TimerObservable} from "rxjs/observable/TimerObservable";
+import { Subscription } from "rxjs";
+import { TimerObservable } from "rxjs/observable/TimerObservable";
+
 @Component({
   selector: 'app-agilidad-aritmetica',
   templateUrl: './agilidad-aritmetica.component.html',
   styleUrls: ['./agilidad-aritmetica.component.css']
 })
 export class AgilidadAritmeticaComponent implements OnInit {
-   @Output() 
-  enviarJuego :EventEmitter<any>= new EventEmitter<any>();
-  nuevoJuego : JuegoAgilidad;
-  ocultarVerificar: boolean;
-  Tiempo: number;
-  repetidor:any;
-  private subscription: Subscription;
+  /*@Output() 
+ enviarJuego :EventEmitter<any>= new EventEmitter<any>();*/
+  unJuego: JuegoAgilidad;
+
+  //ocultarVerificar: boolean;
+  //Tiempo: number;
+  //repetidor:any;
+  //private subscription: Subscription;
+
+  @Output()
+  enviarJuego: EventEmitter<any> = new EventEmitter<any>();
+
+  usuario: string;
+
+  constructor(private miServicio?: JuegoServiceService) {
+    this.unJuego = new JuegoAgilidad("Agilidad", "Cyn", true);
+  }
+
   ngOnInit() {
+    this.generar();
   }
-   constructor() {
-     this.ocultarVerificar=true;
-     this.Tiempo=5; 
-    this.nuevoJuego = new JuegoAgilidad();
-    console.info("Inicio agilidad");  
-  }
-  NuevoJuego() {
-    this.ocultarVerificar=false;
-   this.repetidor = setInterval(()=>{ 
-      
-      this.Tiempo--;
-      console.log("llego", this.Tiempo);
-      if(this.Tiempo==0 ) {
-        clearInterval(this.repetidor);
-        this.verificar();
-        this.ocultarVerificar=true;
-        this.Tiempo=5;
-      }
-      }, 900);
 
+  generar() {
+    this.unJuego.Jugar();
+    if (this.unJuego.contador == 3) {
+      this.verificar();
+    }
   }
-  verificar()
-  {
-    this.ocultarVerificar=false;
-    clearInterval(this.repetidor);
-   
 
-   
-  }  
+  verificar() {
+    this.unJuego.Verificar();
+    this.unJuego.jugador = this.miServicio.retornarUsuario();
+    this.enviarJuego.emit(this.unJuego);
+  }
+
 
 }

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Juego } from '../clases/Juego';
-import { JuegoAdivina } from '../clases/juego-adivina';
-import { MiHttpService } from './mi-http/mi-http.service'; 
+//import { JuegoAdivina } from '../clases/juego-adivina';
+//import { MiHttpService } from './mi-http/mi-http.service'; 
 
 @Injectable()
 export class JuegoServiceService {
 
-  peticion:any;
+  /* peticion:any;
   constructor( public miHttp: MiHttpService ) {
     this.peticion = this.miHttp.httpGetO("http://localhost:3003");
 //    this.peticion = this.miHttp.httpGetO("https://restcountries.eu/rest/v2/all");
@@ -61,6 +61,28 @@ export class JuegoServiceService {
     });
 
     return promesa;
+  }*/
+  miArray: Array<Juego>;
+  unUsuario: string;
+
+  constructor() {
+    this.miArray = new Array<Juego>();
+  }
+
+  public inicializarLista(): Array<Juego> {
+    return this.miArray;
+  }
+
+  public cargarLista(array: Array<Juego>) {
+    this.miArray.concat(array);
+  }
+
+  public cargarUsuario(nombreUsuario: string) {
+    this.unUsuario = nombreUsuario;
+  }
+
+  public retornarUsuario() {
+    return this.unUsuario;
   }
 
 }

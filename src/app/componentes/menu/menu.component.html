@@ -26,6 +26,9 @@
         </ul>
     </div>
   </nav-->
+
+  <!-- 
+    //desde aca comence a modificar
   <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -35,14 +38,20 @@
           </button>
           <a class="navbar-brand" routerLink="/Principal">Inicio</a>
         </div>
+
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav ">
+           
+          <ul class="nav navbar-nav ">              
                 <li class="active"><a routerLink="/Juegos">Menú de Juegos</a></li>
                 <li><a data-toggle="tooltip" title="Hooray!" (click)="Juego('Adivina')">Adivina</a></li>
                 <li><a  (click)="Juego('Agilidad')">Agilidad</a></li>
                 <li><a  (click)="Juego('AdivinaMasListado')">Adivina+listado</a></li>
                 <li><a  (click)="Juego('AgilidadaMasListado')">Agilidad+listado</a></li>
               </ul>
+            
+            
+
+
               <ul class="nav navbar-nav navbar-right">
                   <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li>
                   <li><a href="/Login"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
@@ -50,5 +59,18 @@
         </div>
       </div>
     </nav>
-      
-   
+     -->
+
+    <mat-toolbar >
+        <button mat-button routerLink="/Principal"><mat-icon>stars</mat-icon><span>Inicio</span></button>
+        <button mat-button [matMenuTriggerFor] ="menu" routerLink="/Juegos"> <mat-icon>toc</mat-icon><span>Menú</span></button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="Juego('Adivina')">Adivina</button>
+            <button mat-menu-item (click)="Juego('Agilidad')">Agilidad</button>
+            <button mat-menu-item (click)="Juego('AdivinaMasListado')">Piedra, papel o tijera</button>
+            <button mat-menu-item (click)="Juego('AgilidadaMasListado')">Anagrama</button>
+          </mat-menu>
+          <span class= "der"></span>
+        <button mat-button routerLink="#"><mat-icon>insert_emoticon</mat-icon><span>Mis Datos</span></button>
+        <button mat-button routerLink="/Login"><mat-icon>exit_to_app</mat-icon><span>Salir</span></button>            
+    </mat-toolbar>
