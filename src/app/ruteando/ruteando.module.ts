@@ -25,6 +25,8 @@ import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/p
 import { PiedraPapelTijeraMasListadoComponent } from '../componentes/piedra-papel-tijera-mas-listado/piedra-papel-tijera-mas-listado.component';
 import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 import { AnagramaMasListadoComponent } from '../componentes/anagrama-mas-listado/anagrama-mas-listado.component';
+import { DibujoComponent } from '../componentes/dibujo/dibujo.component';
+import { DibujoMasListadoComponent } from '../componentes/dibujo-mas-listado/dibujo-mas-listado.component';
 
 
 // declaro donde quiero que se dirija
@@ -51,7 +53,9 @@ children:
       {path: 'PPT' , component: PiedraPapelTijeraComponent},
       {path: 'PPTMasListado' , component: PiedraPapelTijeraMasListadoComponent},
       {path: 'Anagrama' , component: AnagramaComponent},
-      {path: 'AnagramaMasListado' , component: AnagramaMasListadoComponent}
+      {path: 'AnagramaMasListado' , component: AnagramaMasListadoComponent},
+      {path: 'Dibujo' , component: DibujoComponent},
+      {path: 'DibujoMasListado' , component: DibujoMasListadoComponent}
     ]
 },
 {path: '**' , component: ErrorComponent},

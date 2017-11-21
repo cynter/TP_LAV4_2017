@@ -61,6 +61,8 @@ import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/pi
 //animacion
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule,MatListModule,MatCardModule,MatMenuModule,MatToolbarModule,MatIconModule} from '@angular/material';
+import { DibujoComponent } from './componentes/dibujo/dibujo.component';
+import { DibujoMasListadoComponent } from './componentes/dibujo-mas-listado/dibujo-mas-listado.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +91,9 @@ import {MatButtonModule,MatListModule,MatCardModule,MatMenuModule,MatToolbarModu
     InputJugadoresComponent,
     PiedraPapelTijeraMasListadoComponent,
     SexoPipe,
-    PiedraPapelTijeraComponent
+    PiedraPapelTijeraComponent,
+    DibujoComponent,
+    DibujoMasListadoComponent
   ],
   imports: [
     BrowserModule,

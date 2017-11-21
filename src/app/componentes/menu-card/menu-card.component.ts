@@ -33,6 +33,9 @@ export class MenuCardComponent implements OnInit {
       case 'AnagramaMasListado':
         this.router.navigate(['/Juegos/AnagramaMasListado']);
         break;
+      case 'DibujoMasListado':
+        this.router.navigate(['/Juegos/DibujoMasListado']);
+        break;
     }
   }
 }
