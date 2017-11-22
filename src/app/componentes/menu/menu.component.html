@@ -65,12 +65,13 @@
         <button mat-button routerLink="/Principal"><mat-icon>stars</mat-icon><span>Inicio</span></button>
         <button mat-button [matMenuTriggerFor] ="menu" routerLink="/Juegos"> <mat-icon>toc</mat-icon><span>Menú</span></button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="Juego('Adivina')">Adivina</button>
-            <button mat-menu-item (click)="Juego('Agilidad')">Agilidad</button>
-            <button mat-menu-item (click)="Juego('AdivinaMasListado')">Piedra, papel o tijera</button>
-            <button mat-menu-item (click)="Juego('AgilidadaMasListado')">Anagrama</button>
+            <button mat-menu-item (click)="Juego('AdivinaMasListado')">Adivina</button>
+            <button mat-menu-item (click)="Juego('AgilidadMasListado')">Agilidad</button>
+            <button mat-menu-item (click)="Juego('PPTMasListado')">Piedra, papel o tijera</button>
+            <button mat-menu-item (click)="Juego('AnagramaMasListado')">Anagrama</button>
+            <button mat-menu-item (click)="Juego('DibujoMasListado')">¿Que dibujo soy?</button>            
           </mat-menu>
           <span class= "der"></span>
-        <button mat-button routerLink="#"><mat-icon>insert_emoticon</mat-icon><span>Mis Datos</span></button>
+        <button mat-button routerLink="/QuienSoy"><mat-icon>insert_emoticon</mat-icon><span>Mis Datos</span></button>
         <button mat-button routerLink="/Login"><mat-icon>exit_to_app</mat-icon><span>Salir</span></button>            
     </mat-toolbar>

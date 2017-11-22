@@ -48,7 +48,7 @@ children:
      [{path: '' , component: MenuCardComponent},
      {path: 'Adivina' , component: AdivinaElNumeroComponent},
       {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
-      {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
+      {path: 'AgilidadMasListado' , component: AgilidadMasListadoComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'PPT' , component: PiedraPapelTijeraComponent},
       {path: 'PPTMasListado' , component: PiedraPapelTijeraMasListadoComponent},

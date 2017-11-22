@@ -7,8 +7,9 @@
     margin: 10px;
     padding-bottom: 10px;
     float: left;
-  background-color: rgb(84, 107, 236);
+  background-color: rgb(247, 243, 9);
     text-align: center;
+    /*text-decoration-color: rgb(white, white, white);*/
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */

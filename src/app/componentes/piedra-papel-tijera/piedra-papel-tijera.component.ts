@@ -17,12 +17,12 @@ export class PiedraPapelTijeraComponent implements OnInit {
   
     constructor(private miServicio?: JuegoServiceService) 
     { 
-      this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Alan", true);
+      this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Cyn", true);
     }
   
     Piedra()
     {
-      this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Alan", true);
+      this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Cyn", true);
       this.juegoPPT.Piedra();
       this.juegoPPT.jugador = this.miServicio.retornarUsuario();
       this.enviarJuego.emit(this.juegoPPT);
@@ -31,7 +31,7 @@ export class PiedraPapelTijeraComponent implements OnInit {
   
     Papel()
     {
-      this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Alan", true);
+      this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Cyn", true);
       this.juegoPPT.Papel();
       this.juegoPPT.jugador = this.miServicio.retornarUsuario();
       this.enviarJuego.emit(this.juegoPPT);
@@ -40,7 +40,7 @@ export class PiedraPapelTijeraComponent implements OnInit {
   
     Tijera()
     {
-      this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Alan", true);
+      this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Cyn", true);
       this.juegoPPT.Tijera();
       this.juegoPPT.jugador = this.miServicio.retornarUsuario();
       this.enviarJuego.emit(this.juegoPPT);

@@ -1,33 +1,41 @@
-import { Juego } from '../clases/juego'
-
-export class JuegoAdivina extends  Juego {
-    numeroSecreto: number = 0;
-    numeroIngresado = 0;
-    constructor(nombre?: string, gano?: boolean, jugador?:string) {
-        super("Adivina el número",gano,jugador);
-     
+export class JuegoAdivina {
+  
+  nombre: string;
+  numeroSecreto: number;
+  gano: boolean;
+  jugador: string;
+  numeroIngresado:number;
+  validador: boolean=false;
+  
+   constructor(unNombre: string, jugador: string, gano: boolean) 
+    { 
+      this.nombre = unNombre;
+      this.jugador= jugador;
+      this.gano= gano;
+    }
     
-      
+  
+  GenerarNuevo()
+  {
+      this.validador=false;
+      this.numeroSecreto=Math.floor(Math.random()*100);
+      console.info("numero: ",this.numeroSecreto);
+  }
+  
+  Verificar(){
+  
+  this.validador=true;
+  
+  if(this.numeroIngresado == this.numeroSecreto)
+  {
+      this.gano=true;
+      return true;
       }
-    public verificar() {
-        if (this.numeroIngresado == this.numeroSecreto) {
-          this.gano = true;
-        }
-        if (this.gano) {
-          return true;
-        } else {
-          return false;
-        }
-     }
-     public generarnumero() {
-        this.numeroSecreto = Math.floor((Math.random() * 100) + 1);
-        console.info('numero Secreto:' + this.numeroSecreto);
-        this.gano = false;
-      }
-      public retornarAyuda() {
-        if (this.numeroIngresado < this.numeroSecreto) {
-          return "Falta";
-        }
-        return "Te pasate";
-      }
-}
+  this.gano=false;
+  return false;
+  }
+  
+  
+  
+  }
+
