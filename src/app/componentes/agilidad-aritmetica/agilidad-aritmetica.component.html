@@ -44,18 +44,20 @@
   </div>
   <br>
   <div align="center" class="titulo">
-    <h4>Para completar este juego, debes resolver 3 cuentas matematicas, de las cuales, para que el resultado
+    <!--
+      <h4>Para completar este juego, debes resolver 3 cuentas matematicas, de las cuales, para que el resultado
       <br> sea positivo, debes acertar minimamente 2. ¡Que te diviertas!
     </h4>
+  -->
   </div>
   <br>
   <br>
   <br>
 
   <input type="text" value="{{unJuego.numero1}}" name="num1">
-
+  <br>
   <input type="text" value="{{unJuego.operadorCaracter}}" name="signo">
-
+  <br>
   <input type="text" value="{{unJuego.numero2}}" name="num2">
   <br>
   <br>
@@ -67,7 +69,9 @@
   <br>
   <br>
 
-  <input type="button" class="btn btn-primary" value="SIGUIENTE" name="siguiente" (click)="unJuego.Siguiente()">
+<!--  <input type="button" class="button button1" value="SIGUIENTE" name="siguiente" (click)="unJuego.Siguiente()">  -->
+  <button type="button" class="button button1" value="SIGUIENTE" name="siguiente" (click)="unJuego.Siguiente()"> Siguiente</button>
+  
   <br>
   <br>
 
