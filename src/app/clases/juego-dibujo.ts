@@ -35,18 +35,18 @@ export class JuegoDibujo{
 
         this.dibujoAdivinar = [
             "../TP_LAV4_2017/assets/dibujo/picapiedras.jpg",
-            "../../assets/dibujo/dumbo.jpg",
-            "../../assets/dibujo/gargolas.jpg",
-            "../../assets/dibujo/garfield.jpg",
-            "../../assets/dibujo/snoopy.jpg",
-            "../../assets/dibujo/piolin.jpg",
-            "../../assets/dibujo/donald.jpg",
-            "../../assets/dibujo/hijitus.jpg",
-            "../../assets/dibujo/sonic.jpg",
-            "../../assets/dibujo/dexter.jpg",
-            "../../assets/dibujo/coyote.jpg",
-            "../../assets/dibujo/goku.jpg",
-            "../../assets/dibujo/pluto.jpg"
+            "../TP_LAV4_2017/assets/dibujo/dumbo.jpg",
+            "../TP_LAV4_2017/assets/dibujo/gargolas.jpg",
+            "../TP_LAV4_2017/assets/dibujo/garfield.jpg",
+            "../TP_LAV4_2017/assets/dibujo/snoopy.jpg",
+            "../TP_LAV4_2017/assets/dibujo/piolin.jpg",
+            "../TP_LAV4_2017/assets/dibujo/donald.jpg",
+            "../TP_LAV4_2017/assets/dibujo/hijitus.jpg",
+            "../TP_LAV4_2017/assets/dibujo/sonic.jpg",
+            "../TP_LAV4_2017/assets/dibujo/dexter.jpg",
+            "../TP_LAV4_2017/assets/dibujo/coyote.jpg",
+            "../TP_LAV4_2017/assets/dibujo/goku.jpg",
+            "../TP_LAV4_2017/assets/dibujo/pluto.jpg"
         ];
         this.Next();
     }
