@@ -34,7 +34,7 @@ export class JuegoDibujo{
             "PLUTO"];
 
         this.dibujoAdivinar = [
-            "../../assets/dibujo/picapiedras.jpg",
+            "../TP_LAV4_2017/assets/dibujo/picapiedras.jpg",
             "../../assets/dibujo/dumbo.jpg",
             "../../assets/dibujo/gargolas.jpg",
             "../../assets/dibujo/garfield.jpg",
